@@ -5,11 +5,11 @@ class ComplexForm extends React.Component {
     super(props);
 
     this.state = {
-      data: "Initial Data..."
+      data: "INITIAL MOFUGGIN STATE"
     }
 
-    this.updateState = this.updateState.bind(this)
-  }
+    this.updateState = this.updateState.bind(this);
+  };
 
   updateState(e) {
     this.setState({data: e.target.value});
@@ -18,7 +18,7 @@ class ComplexForm extends React.Component {
   render() {
     return (
       <div>
-        <Content myDataProp = {this.state.data} updateStateProp={this.updateState}></Content>
+        <Content initialData={this.state.data} updateData={this.updateState} />
       </div>
     );
   }
@@ -28,8 +28,8 @@ class Content extends React.Component {
   render() {
     return (
       <div>
-        <input type="text" value={this.props.myDataProp} onChange={this.props.updateStateProp} />
-        <h3>{this.props.myDataProp}</h3>
+        <input type="text" value={this.props.initialData} onChange={this.props.updateData} />
+        <h3>{this.props.initialData}</h3>
       </div>
     );
   }
