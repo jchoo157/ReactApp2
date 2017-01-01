@@ -11,8 +11,9 @@ import ForceUpdate from './ForceUpdate.jsx';
 import DomNode from './DomNode.jsx';
 import ComponentLifeCycle from './ComponentLifeCycle.jsx';
 import Forms from './Forms.jsx';
+import ComplexForm from './ComplexForm.jsx';
 
-ReactDOM.render(<Forms />, document.getElementById('app'));
+ReactDOM.render(<ComplexForm />, document.getElementById('app'));
 
 // setTimeout(() => {
 //   ReactDOM.unmountComponentAtNode(document.getElementById('app'));}, 10000);
