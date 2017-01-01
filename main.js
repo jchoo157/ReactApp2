@@ -8,5 +8,11 @@ import Props from './Props.jsx';
 import Validate from './Validate.jsx';
 import SetState from './SetState.jsx';
 import ForceUpdate from './ForceUpdate.jsx';
+import DomNode from './DomNode.jsx';
+import ComponentLifeCycle from './ComponentLifeCycle.jsx';
+import Forms from './Forms.jsx';
 
-ReactDOM.render(<SetState />, document.getElementById('app'));
+ReactDOM.render(<Forms />, document.getElementById('app'));
+
+// setTimeout(() => {
+//   ReactDOM.unmountComponentAtNode(document.getElementById('app'));}, 10000);
