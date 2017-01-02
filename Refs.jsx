@@ -20,6 +20,7 @@ class Refs extends React.Component {
 
   clearInput() {
     this.setState({data: ''});
+    // this targets the input field so that when you hit clear, you can instantly start typing again
     ReactDOM.findDOMNode(this.refs.myInput).focus();
   }
 

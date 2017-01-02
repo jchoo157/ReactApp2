@@ -15,8 +15,9 @@ import ComplexForm from './ComplexForm.jsx';
 import AddItems from './AddItems.jsx';
 import Events from './Events.jsx';
 import Refs from './Refs.jsx';
+import Keys from './Keys.jsx';
 
-ReactDOM.render(<Events />, document.getElementById('app'));
+ReactDOM.render(<Keys />, document.getElementById('app'));
 
 // setTimeout(() => {
 //   ReactDOM.unmountComponentAtNode(document.getElementById('app'));}, 10000);
