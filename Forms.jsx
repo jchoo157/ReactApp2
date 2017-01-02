@@ -5,21 +5,21 @@ class Forms extends React.Component {
     super(props);
 
     this.state = {
-      data: 'Initial data...'
+      data: "INITIAL DATA..."
     }
 
-    this.updateState = this.updateState.bind(this);
+    this.updateData = this.updateData.bind(this);
   };
 
-  updateState(e) {
+  updateData(e) {
     this.setState({data: e.target.value});
-  }
+  };
 
   render() {
     return (
       <div>
-        <input type="text" value={this.state.data} onChange={this.updateState} />
-        <h4>{this.state.data}</h4>
+        <input type="text" value={this.state.data} onChange={this.updateData} />
+        <h3>{this.state.data}</h3>
       </div>
     );
   }
