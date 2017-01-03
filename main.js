@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { Router, Route, Link, hashHistory, IndexRoute } from 'react-router';
 import App from './App.jsx';
 import Test from './Test.jsx';
 import Table from './Table.jsx';
@@ -16,8 +17,20 @@ import AddItems from './AddItems.jsx';
 import Events from './Events.jsx';
 import Refs from './Refs.jsx';
 import Keys from './Keys.jsx';
+import Home from './pages/Home';
+import Layout from './pages/Layout';
+import About from './pages/About';
 
-ReactDOM.render(<Keys />, document.getElementById('app'));
+ReactDOM.render((
+  <Router history={hashHistory}>
+    <Route path="/" component={Layout}>
+      <IndexRoute component={Home} />
+      <Route path="Home" component={Home}></Route>
+      <Route path="About" component={About}></Route>
+    </Route>
+  </Router>
+), document.getElementById('app'))
+
 
 // setTimeout(() => {
 //   ReactDOM.unmountComponentAtNode(document.getElementById('app'));}, 10000);
